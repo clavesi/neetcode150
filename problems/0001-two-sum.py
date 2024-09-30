@@ -55,12 +55,12 @@ class Test(unittest.TestCase):
         target = 9
         self.assertEqual(self.solution.twoSum(nums, target), [0, 1])
 
-    def test_contains_duplicate_false(self):
+    def testTwo(self):
         nums = [3, 2, 4]
         target = 6
         self.assertEqual(self.solution.twoSum(nums, target), [1, 2])
 
-    def test_containsDuplicate_mixed(self):
+    def testThree(self):
         nums = [3, 3]
         target = 6
         self.assertEqual(self.solution.twoSum(nums, target), [0, 1])
