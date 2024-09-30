@@ -24,7 +24,7 @@ class Solution:
     """
 
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-
+        # TODO: more efficient Two Sum
         return []
 
     def twoSumBruteForce(self, nums: List[int], target: int) -> List[int]:
@@ -58,12 +58,12 @@ class Test(unittest.TestCase):
     def test_contains_duplicate_false(self):
         nums = [3, 2, 4]
         target = 6
-        self.assertFalse(self.solution.twoSum(nums, target), [1, 2])
+        self.assertEqual(self.solution.twoSum(nums, target), [1, 2])
 
     def test_containsDuplicate_mixed(self):
         nums = [3, 3]
         target = 6
-        self.assertTrue(self.solution.twoSum(nums, target), [0, 1])
+        self.assertEqual(self.solution.twoSum(nums, target), [0, 1])
 
 
 if __name__ == "__main__":
