@@ -48,6 +48,22 @@ class Solution:
 
         return sDictionary == tDictionary
 
+    def mySolutionSimplified(self, s: str, t: str) -> bool:
+        """| Courtesy of NeetCode
+        | This is what I wanted to do, don't know why I thought I needed the in check
+        """
+        # Quick length check
+        if (len(s) != len(t)):
+            return False
+
+        sDictionary = {}
+        tDictionary = {}
+        for i in range(len(s)):
+            sDictionary[s[i]] = 1 + sDictionary.get(s[i], 0)
+            tDictionary[t[i]] = 1 + tDictionary.get(t[i], 0)
+
+        return sDictionary == tDictionary
+
     def moreEfficientHashMap(self, s: str, t: str) -> bool:
         """
         | Courtesy of rahulvarma5297 on LeetCode
